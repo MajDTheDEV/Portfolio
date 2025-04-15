@@ -261,7 +261,32 @@ export default function Portfolio() {
       gradient: 'from-purple-300 to-purple-500',
       button: 'bg-purple-600 hover:bg-purple-700',
       hover: 'hover:text-purple-800 hover:shadow-[0_0_10px_purple]'
-    }
+    },
+    orange: {
+      gradient: 'from-orange-300 to-orange-500',
+      button: 'bg-orange-600 hover:bg-orange-700',
+      hover: 'hover:text-orange-800 hover:shadow-[0_0_10px_orange]'
+    },
+    pink: {
+      gradient: 'from-pink-300 to-pink-500',
+      button: 'bg-pink-600 hover:bg-pink-700',
+      hover: 'hover:text-pink-800 hover:shadow-[0_0_10px_pink]'
+    },
+    teal: {
+      gradient: 'from-teal-300 to-teal-500',
+      button: 'bg-teal-600 hover:bg-teal-700',
+      hover: 'hover:text-teal-800 hover:shadow-[0_0_10px_teal]'
+    },
+    indigo: {
+      gradient: 'from-indigo-300 to-indigo-500',
+      button: 'bg-indigo-600 hover:bg-indigo-700',
+      hover: 'hover:text-indigo-800 hover:shadow-[0_0_10px_indigo]'
+    },
+    white: {
+      gradient: 'from-white to-gray-100',
+      button: 'bg-white hover:bg-gray-200 text-black',
+      hover: 'hover:text-gray-800 hover:shadow-[0_0_10px_white]'
+    },
   };
 
   const currentTheme = themeColors[theme];
