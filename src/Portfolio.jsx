@@ -241,6 +241,13 @@ export default function Portfolio() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   const themeColors = {
     red: {
       gradient: 'from-red-300 to-red-500',
@@ -292,7 +299,7 @@ export default function Portfolio() {
   const currentTheme = themeColors[theme];
 
   return (
-    <div className={`min-h-screen bg-gradient-to-r ${currentTheme.gradient} flex flex-col relative overflow-hidden`}>
+    <div className={`min-h-screen scroll-smooth bg-gradient-to-r ${currentTheme.gradient} flex flex-col relative overflow-hidden`}>
       <div className="absolute inset-0 pointer-events-none">
         {stars.map((star, index) => (
           <div
@@ -326,15 +333,18 @@ export default function Portfolio() {
 
     {/* Desktop Navigation */}
     <div className="hidden md:flex space-x-6 text-lg font-medium items-center relative">
-      <a href="#projects" className={`${currentTheme.hover} rounded-full transition duration-300`}>
-        {t('projects')}
-      </a>
-      <a href="#skills" className={`${currentTheme.hover} rounded-full transition duration-300`}>
-        {t('skills')}
-      </a>
-      <a href="#contact" className={`${currentTheme.hover} rounded-full transition duration-300`}>
-        {t('contact')}
-      </a>
+
+
+    <button onClick={() => scrollToSection('projects')} className={`${currentTheme.hover} rounded-full transition duration-300`}>
+  {t('projects')}
+</button>
+<button onClick={() => scrollToSection('skills')} className={`${currentTheme.hover} rounded-full transition duration-300`}>
+  {t('skills')}
+</button>
+<button onClick={() => scrollToSection('contact')} className={`${currentTheme.hover} rounded-full transition duration-300`}>
+  {t('contact')}
+</button>
+
       <div className="relative">
         <button
           onClick={() => setShowThemeMenu(!showThemeMenu)}
@@ -421,9 +431,35 @@ export default function Portfolio() {
     <div className="flex justify-end">
       <button onClick={() => setShowThemeMenu(false)} className="text-2xl font-bold">×</button>
     </div>
-    <a href="#projects" onClick={() => setShowThemeMenu(false)} className="block text-lg font-medium text-gray-800 hover:bg-gray-200 rounded px-3 py-2">{t('projects')}</a>
-    <a href="#skills" onClick={() => setShowThemeMenu(false)} className="block text-lg font-medium text-gray-800 hover:bg-gray-200 rounded px-3 py-2">{t('skills')}</a>
-    <a href="#contact" onClick={() => setShowThemeMenu(false)} className="block text-lg font-medium text-gray-800 hover:bg-gray-200 rounded px-3 py-2">{t('contact')}</a>
+    <button
+  onClick={() => {
+    scrollToSection('projects');
+    setShowThemeMenu(false);
+  }}
+  className="block text-lg font-medium text-gray-800 hover:bg-gray-200 rounded px-3 py-2"
+>
+  {t('projects')}
+</button>
+
+<button
+  onClick={() => {
+    scrollToSection('skills');
+    setShowThemeMenu(false);
+  }}
+  className="block text-lg font-medium text-gray-800 hover:bg-gray-200 rounded px-3 py-2"
+>
+  {t('skills')}
+</button>
+
+<button
+  onClick={() => {
+    scrollToSection('contact');
+    setShowThemeMenu(false);
+  }}
+  className="block text-lg font-medium text-gray-800 hover:bg-gray-200 rounded px-3 py-2"
+>
+  {t('contact')}
+</button>
 
     <hr className="my-2" />
 
