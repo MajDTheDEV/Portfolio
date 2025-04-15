@@ -191,6 +191,18 @@ export default function Portfolio() {
       <p className="text-gray-600">Simple Shop.</p>
     </div>
 
+    <div className="bg-white bg-opacity-30 p-6 shadow-lg rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out">
+      <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
+        <img
+          src="https://i.postimg.cc/Kvdpt4W0/image.png"
+          alt="Project"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h4 className="text-2xl font-bold">CustomPS Hosting</h4>
+      <p className="text-gray-600">Simple Shop.</p>
+    </div>
+
     {/* Project with image 2 */}
     <div className="bg-white bg-opacity-30 p-6 shadow-lg rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out">
       <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
