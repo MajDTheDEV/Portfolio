@@ -194,7 +194,7 @@ export default function Portfolio() {
     <div className="bg-white bg-opacity-30 p-6 shadow-lg rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out">
       <div className="w-full h-64 rounded-lg overflow-hidden mb-4">
         <img
-          src="https://i.postimg.cc/Kvdpt4W0/image.png"
+          src="https://i.postimg.cc/14xL9Z8H/image.png"
           alt="Project"
           className="w-full h-full object-cover"
         />
